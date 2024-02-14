@@ -1,7 +1,7 @@
 ---
 namespace: brianaddicks
 name: adx
-version: 1.0.7
+version: 1.0.0
 description: Ansible module to ingest data into Azure Data Explorer
 readme: README.md
 authors:

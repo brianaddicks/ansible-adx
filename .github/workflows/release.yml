@@ -34,7 +34,6 @@ jobs:
       collection_repo: https://github.com/brianaddicks/ansible-adx/
       quay_username: rh_ee_baddicks
     secrets:
-
       galaxy_api_key: ${{ secrets.ANSIBLE_GALAXY_APIKEY }}
       token: ${{ secrets.GITHUB_TOKEN }}
       quay_token: ${{ secrets.QUAY_TOKEN }}

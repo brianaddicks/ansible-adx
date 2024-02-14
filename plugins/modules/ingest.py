@@ -22,21 +22,21 @@ options:
     cluster_uri:
         description:
             - ADX Cluster URI
-            - ie: https://myadx.region.kusto.windows.net
+            - 'ie: https://myadx.region.kusto.windows.net'
             - Required if environment variable ADX_CLUSTER_URI is not set
         required: false
         type: str
     cluster_ingest_uri:
         description:
             - ADX Cluster URI
-            - ie: https://ingest-myadx.region.kusto.windows.net
+            - 'ie: https://ingest-myadx.region.kusto.windows.net'
             - Required if environment variable ADX_CLUSTER_INGESTION_URI is not set
         required: false
         type: str
     client_id:
         description:
             - Client ID used to authenticate ot adx
-            - ie: aaaabbbb-cccc-dddd-1111-222233334444
+            - 'ie: aaaabbbb-cccc-dddd-1111-222233334444'
             - Required if environment variable ADX_CLIENT_ID is not set
         required: false
         type: str
@@ -49,7 +49,7 @@ options:
     tenant_id:
         description:
             - Azure Tenant ID
-            - ie: contoso.onmicrosoft.com
+            - 'ie: contoso.onmicrosoft.com'
             - Required if environment variables ADX_TENANT_ID is not set
         required: false
         type: str
@@ -71,8 +71,8 @@ options:
     table_schema:
         description:
             - ADX table schema
-            - ie: (MyColumn:datetime, MyColumn2: dynamic)
-        required: required
+            - 'ie: (MyColumn:datetime, MyColumn2: dynamic)'
+        required: true
         type: str
     json_file:
         description:
@@ -102,11 +102,6 @@ EXAMPLES = r"""
     cluster_uri: https://myadx.region.kusto.windows.net
     json_file: ./ingest.json
     table_schema: "(MyColumn:datetime, MyColumn2: dynamic)"
-
-"""
-
-RETURN = r"""
-# These are examples of possible return values, and in general should use other names for return values.
 
 """
 

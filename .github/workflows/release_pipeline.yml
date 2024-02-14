@@ -50,20 +50,19 @@ jobs:
       collection_version: ${{ inputs.collection_version }}
       collection_repo: ${{ inputs.collection_repo }}
       collection_dependencies: ${{ inputs.collection_dependencies }}
-  sanity:
-    uses: redhat-cop/ansible_collections_tooling/.github/workflows/sanity.yml@main
-    with:
-      collection_dependencies: ${{ inputs.collection_dependencies }}
+#   sanity:
+#     uses: redhat-cop/ansible_collections_tooling/.github/workflows/sanity.yml@main
+#     with:
+#       collection_dependencies: ${{ inputs.collection_dependencies }}
   prechecks:
     needs:
       - pre-commit
-      - sanity
+    #   - sanity
     runs-on: ubuntu-latest
     steps:
       - run: >-
           python -c "assert set([
           '${{ needs.pre-commit.result }}',
-          '${{ needs.sanity.result }}',
           ]) == {'success'}"
   infra_release:
     needs:

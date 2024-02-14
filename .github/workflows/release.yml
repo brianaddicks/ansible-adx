@@ -29,7 +29,7 @@ jobs:
     uses: "brianaddicks/ansible-adx/.github/workflows/release_pipeline.yml@main"
     with:
       collection_namespace: brianaddicks
-      collection_name: ansible-adx
+      collection_name: adx
       collection_version: ${{ github.ref_name }}
       collection_repo: https://github.com/brianaddicks/ansible-adx/
       quay_username: rh_ee_baddicks

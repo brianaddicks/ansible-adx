@@ -30,7 +30,7 @@ options:
         description:
             - ADX Cluster URI
             - 'ie: https://ingest-myadx.region.kusto.windows.net'
-            - Required if environment variable ADX_CLUSTER_INGESTION_URI is not set
+            - Required if environment variable ADX_CLUSTER_INGEST_URI is not set
         required: false
         type: str
     client_id:

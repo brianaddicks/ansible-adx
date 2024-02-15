@@ -1,14 +1,14 @@
 ---
 namespace: brianaddicks
 name: adx
-version: 1.0.0
+version: 1.0.2-devel
 description: Ansible module to ingest data into Azure Data Explorer
 readme: README.md
 authors:
     - Brian Addicks @brianaddicks
 
-repository: https://github.com/brianaddicks/ansible-adx
-issues: https://github.com/brianaddicks/ansible-adx/issues
+repository: https://github.com/brianaddicks/ansible-adx/
+issues: https://github.com/brianaddicks/ansible-adx//issues
 build_ignore:
     - galaxy.yml.j2
     - release.yml
@@ -16,6 +16,7 @@ build_ignore:
     - .ansiblelint.yml
     - .yamllint.yml
     - '*.tar.gz'
+    - ee
 license:
     - GPL-3.0-or-later
 tags:

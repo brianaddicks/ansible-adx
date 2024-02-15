@@ -76,6 +76,18 @@ jobs:
     secrets:
       api_key: ${{ secrets.galaxy_api_key }}
       token: ${{ secrets.token }}
+  deployEE:
+    needs:
+      - infra_release
+    uses: brianaddicks/ansible-ee/.github/workflows/deploy-multiarch3.yml@main
+    with:
+      EE_FOLDER_NAME: .github/files
+      EE_IMAGE_TAG: 'latest'
+    secrets:
+      QUAY_USERNAME: ${{ inputs.quay_username }}
+      QUAY_PASSWORD: ${{ secrets.quay_token }}
+      REDHAT_USERNAME: ${{ secrets.REDHAT_USERNAME }}
+      REDHAT_PASSWORD: ${{ secrets.REDHAT_PASSWORD }}
   # deployEE:
   #   needs:
   #     - infra_release

@@ -20,7 +20,7 @@ options:
   package_manager_path: /usr/bin/microdnf
 
 additional_build_files:
-  - src: files
+  - src: ee_files
     dest: configs
 
 additional_build_steps:

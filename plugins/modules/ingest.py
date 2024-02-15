@@ -930,7 +930,7 @@ def run_module():
     # define available arguments/parameters a user can pass to the module
     module_args = dict(
         cluster_ingest_uri=dict(
-            required=False, fallback=(env_fallback, ["ADX_CLUSTER_INGESTION_URI"])
+            required=False, fallback=(env_fallback, ["ADX_CLUSTER_INGEST_URI"])
         ),
         client_id=dict(required=False, fallback=(env_fallback, ["ADX_CLIENT_ID"])),
         client_secret=dict(
@@ -940,7 +940,9 @@ def run_module():
         database_name=dict(required=True),
         table_name=dict(required=True),
         ingest_mapping_name=dict(required=False),
-        cluster_uri=dict(required=True),
+        cluster_uri=dict(
+            required=False, fallback=(env_fallback, ["ADX_CLUSTER_URI"])
+        ),
         table_schema=dict(required=True),
         json_file=dict(type="path", required=True),
     )

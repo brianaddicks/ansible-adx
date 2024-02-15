@@ -998,9 +998,6 @@ def run_module():
         tenant_id=module.params.get("tenant_id"),
     )
 
-    with open("data.json", "w", encoding="utf-8") as f:
-        json.dump(this_config, f, ensure_ascii=False, indent=4)
-
     app = KustoSampleApp()
     app.load_configs(this_config)
 

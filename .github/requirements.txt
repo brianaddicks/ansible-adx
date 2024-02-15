@@ -1,5 +1,0 @@
-tqdm
-inflection
-azure-kusto-ingest
-azure-kusto-data
-jmes_path
